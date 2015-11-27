@@ -7,7 +7,6 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var users2 = require('./routes/users');
 
 var app = express();
 
@@ -21,11 +20,19 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+//挂载一个虚拟的文件路径
+app.use('/lib', express.static(path.join(__dirname, 'node_modules')));
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+
+/*这一部分就与tornado的app router声明一样的 so brilliant!*/
 app.use('/', routes);
 app.use('/users', users);
-app.use('/wer', users2);
+app.use('/change', users);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -57,6 +64,8 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
+
+
 
 
 module.exports = app;

@@ -3,5 +3,4 @@
  */
 
 $(function(){
-    alert("Hi");
-})
+});
