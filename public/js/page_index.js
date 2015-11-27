@@ -3,4 +3,8 @@
  */
 
 $(function(){
+    var name = '#{name}';
 });
+window.onload = function () {
+    alert(window.myname);
+}
