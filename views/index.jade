@@ -2,4 +2,13 @@ extends layout
 
 block content
   h1= name
+  h1!= name
   p Welcome, <strong>#{name}</strong> </br>your age is <strong>#{age}</strong> </br>your gender is <strong>#{gender}</strong>
+
+  - var pp= name
+    li= pp
+
+  - var cols= cols
+      - each cl in cols
+        li= cl.name
+        li= cl.age
