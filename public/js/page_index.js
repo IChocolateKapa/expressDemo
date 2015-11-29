@@ -6,5 +6,5 @@ $(function(){
     var name = '#{name}';
 });
 window.onload = function () {
-    alert(window.myname);
+    console.log("in index.js file: ", data);
 }
