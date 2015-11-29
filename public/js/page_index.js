@@ -3,8 +3,6 @@
  */
 
 $(function(){
-    var name = '#{name}';
+    var name = data;
+    console.log("in index.js file: ", name);
 });
-window.onload = function () {
-    console.log("in index.js file: ", data);
-}

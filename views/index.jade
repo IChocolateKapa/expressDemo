@@ -13,9 +13,10 @@ block content
       - each cl in collegues
         li= cl.name
         li= cl.age
+  
 
 
-  script.
+    script.
       var data = !{JSON.stringify(name)}//这个就是全局变量
       console.log("in jade: data=", data);
       window.myname = JSON.stringify(#{name});//这种取值方式是 错误的！！！！， 谨记
