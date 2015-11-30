@@ -17,7 +17,7 @@ router.post('/login', function(req, res, next) {
     var username = req.body.username;
     var password = req.body.password;//这两种方式是获取post请求的参数
     console.log("username is: ", username);
-
+    app.locals.username = username;
     //res.setHeader({"status": 200});
     res.send({status: "success"});
 
@@ -28,7 +28,7 @@ router.get('/quit', function(req, res, next) {
     var password = req.query.password;//这两种方式是获取get请求的参数
     console.log("password is: ", password);
 
-    res.render('login', {username: username, password: password});
+    res.render('login', {username: app.locals.username, password: password});
 });
 
 
