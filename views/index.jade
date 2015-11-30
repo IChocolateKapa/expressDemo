@@ -1,24 +1,26 @@
 extends layout
 
 block content
-  h1= name
-  h1!= name
-  p Welcome, <strong>#{name}</strong> </br>your age is <strong>#{age}</strong> </br>your gender is <strong>#{gender}</strong>
+    h1= name
+    h1!= name
+    p Welcome, <strong>#{name}</strong> </br>your age is <strong>#{age}</strong> </br>your gender is <strong>#{gender}</strong>
 
-  - var pp= name
-    li= pp
+    - var pp= name
+        li= pp
 
-  //下面的例子是如何遍历数组的， Echo真棒
-  - var collegues= cols//注意接收的变量名与Render进来的变量名字不能一样， 于是就这样解决了困扰我一晚上的问题哟，开心开心
-      - each cl in collegues
-        li= cl.name
-        li= cl.age
-  
+    //下面的例子是如何遍历数组的， Echo真棒
+    - var collegues= cols//注意接收的变量名与Render进来的变量名字不能一样， 于是就这样解决了困扰我一晚上的问题哟，开心开心
+        - each cl in collegues
+            li= cl.name
+            li= cl.age
 
+    - var pr= price
+        //li= pr
+        h3 prices are #{pr}
 
     script.
-      var data = !{JSON.stringify(name)}//这个就是全局变量
-      console.log("in jade: data=", data);
-      window.myname = JSON.stringify(#{name});//这种取值方式是 错误的！！！！， 谨记
-      console.log("in jade: name=", window.myname);
-  script(src='/js/page_index.js')
+        var data = !{JSON.stringify(name)}//这个就是全局变量
+        console.log("in jade: data=", data);
+        //window.myname = JSON.stringify(#{name});//这种取值方式是 错误的！！！！， 谨记
+        //console.log("in jade: name=", window.myname);
+    script(src='/js/page_index.js')
