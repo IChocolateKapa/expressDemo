@@ -1,0 +1,22 @@
+//
+   Created by Echo on 2015/12/1.
+
+extends layout
+
+block append head
+    link(rel="styleSheet", href="/css/page_score.css")
+
+block content
+    - var people= students
+    - each peo, index in people
+        span.parSpan #{peo.name}
+            span.chiSpan #{peo.score}
+                
+
+    script.
+        $(function(){
+            $(".chiSpan").each(function () {
+                $(this).parent(".parSpan").css({"line-height": $(this).html() + "px"});
+                $(this).css({"height": $(this).html() + "px"});
+            })
+        })

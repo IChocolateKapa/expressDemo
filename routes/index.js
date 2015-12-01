@@ -32,4 +32,23 @@ router.get('/quit', function(req, res, next) {
 });
 
 
+router.get('/score', function(req, res, next) {
+
+    res.render('score', {students: [
+        {
+            name: "Echo",
+            score: 87
+        },
+        {
+            name: "LDL",
+            score: 70
+        },
+        {
+            name: "LJD",
+            score: 23
+        }
+    ]});
+});
+
+
 module.exports = router;

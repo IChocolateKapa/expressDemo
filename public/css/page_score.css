@@ -1,0 +1,14 @@
+.parSpan{
+    height: auto;
+    padding: 4px;
+    min-height: 30px;
+    background: lightcoral;
+    display: block;
+    margin-bottom: 20px;
+}
+.chiSpan{
+    padding: 2px;
+    background: lightblue;
+    display: inline-block;
+    color: white;
+}
