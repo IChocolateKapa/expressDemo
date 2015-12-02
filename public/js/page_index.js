@@ -19,4 +19,22 @@ $(function(){
         }
     })
 
+
 });
+
+/**
+ * 获取分母 数量级 基数
+ * dataAr: [1234, 45676, 4326378217895734,5667]形式的数字数组
+ * */
+function getBaseNum(dataAr) {
+    var max = dataAr[0];
+    for (var i = 1; i < dataAr.length; i++) {
+        if (max < dataAr[i]) {
+            max = dataAr[i];
+        }
+    }
+
+    var maxStr = max + "",
+        baseNum = Math.pow(10, (maxStr.length - 2));
+    return baseNum;
+}
