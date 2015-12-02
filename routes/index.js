@@ -50,5 +50,9 @@ router.get('/score', function(req, res, next) {
     ]});
 });
 
+function ABC (){
 
-module.exports = router;
+}
+
+module.exports = ABC;
+//module.exports = router;

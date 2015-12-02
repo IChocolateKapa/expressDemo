@@ -28,9 +28,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 /*这一部分就与tornado的app router声明一样的 so brilliant!*/
-app.use('/', routes);
+app.use('/app', routes);
 app.use('/users', users);
-app.use('/change', users);
+//app.use('/change', users);
 
 
 
