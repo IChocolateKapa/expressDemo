@@ -1,0 +1,44 @@
+/**
+ * Created by Echo on 2015/12/9.
+ */
+
+.main_wrap{
+    width: 98%;
+    height: 98%;
+    border: 1px solid white;
+    position: absolute;
+    padding: 5px;
+}
+#main{
+    width: 67%;
+    height: 80%;
+    float: left;
+    border: 1px solid red;
+}
+.side{
+    width: 32%;
+    height: 80%;
+    float: right;
+    border: 1px solid green;
+}
+#side_1,
+#side_2{
+    height: 49%;
+    border: 1px solid red;
+}
+#subck1,
+#subck2{
+    width: 300px;
+    height: 40px;
+    background: indianred;
+    outline: none;
+    color: white;
+    position: fixed;
+    bottom: 50px;
+    left: 100px;
+    cursor: pointer;
+    border: none;
+}
+#subck2{
+    left: 600px;
+}

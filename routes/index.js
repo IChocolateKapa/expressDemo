@@ -52,4 +52,19 @@ router.get('/score', function(req, res, next) {
 
 
 
+
+/* GET home page. */
+router.get('/render', function(req, res, next) {
+
+    //var price = req.query.price;
+    //var vbs = req.query.vbs;//这两种方式是获取get请求的参数
+    //console.log("vbs is: ", vbs);
+    //res.render('echartsTestMulti');
+    res.send("This is renderChart!")
+});
+
+
+
+
+
 module.exports = router;

@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var render = require('./routes/renderChart');
 
 var app = express();
 
@@ -30,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 /*这一部分就与tornado的app router声明一样的 so brilliant!*/
 app.use('/', routes);
 app.use('/users', users);
-//app.use('/change', users);
+app.use('/render', render);
 
 
 
