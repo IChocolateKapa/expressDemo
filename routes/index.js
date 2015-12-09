@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
     var price = req.query.price;
     var vbs = req.query.vbs;//这两种方式是获取get请求的参数
     console.log("vbs is: ", vbs);
-
+    //res.send("dhasifhiehgiwhjif");
     res.render('index', {title: "这里是第一个页面", name: 'Echo', age: 24, gender: "female", cols: [{name: "Shasha", age: 23}, {name:   'shaohua', age: 34}], price: price});
 });
 
@@ -50,9 +50,6 @@ router.get('/score', function(req, res, next) {
     ]});
 });
 
-function ABC (){
 
-}
 
-module.exports = ABC;
-//module.exports = router;
+module.exports = router;
