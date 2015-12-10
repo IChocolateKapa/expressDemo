@@ -5,8 +5,6 @@ extends layout
 
 block append head
     link(rel='stylesheet', href='/css/page_render.css')
-    script(src='/lib/echarts/build/echarts-all.js')
-    script(src='/js/page_render.js')
 
 
 block content
@@ -19,6 +17,9 @@ block content
             div#side_2
 
 
-
     <input type="button" id="subck1" value="点击sub1"/>
     <input type="button" id="subck2" value="点击sub2"/>
+
+
+    script(src='/lib/echarts/build/echarts-all.js')
+    script(src='/js/page_render.js')

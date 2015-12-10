@@ -247,8 +247,8 @@ $(function () {
                     var mainChart = _this.chartData.mainChart.dom = echarts.init(document.getElementById("main"));
                     mainChart.setOption(_this.chartData.mainChart.data);
 
-                    //var ecConfig = echarts.config;
-                    //mainChart.on(ecConfig.EVENT.CLICK, ckck);
+                    var ecConfig = echarts.config;
+                    _this.chartData.mainChart.dom.on(ecConfig.EVENT.CLICK, ckck);
 
                 case "sub1":
                     //_this.chartData.subChart_1.data = ;
