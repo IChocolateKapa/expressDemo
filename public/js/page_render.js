@@ -374,7 +374,13 @@ $(function () {
                 _this.chartData.mainChart.data = _this.chartData.subChart_2.data;
                 _this.chartData.subChart_2.data = curMainData;
                 _this.renderAllCharts();
-            })
+            });
+
+
+            /*$(document).click(function (ev) {
+                var event = ev || window.event;
+                console.log(event.target);
+            });*/
         },
         /**
          * 需要有一个维度对应渲染图表的类型对照配置表
@@ -502,8 +508,8 @@ $(function () {
                 ]
             };
 
-            //var ecConfig = echarts.config;
-            //_this.chartData.mainChart.dom.on(ecConfig.EVENT.CLICK, ckck);
+            var ecConfig = echarts.config;
+            window.mainChart.on(ecConfig.EVENT.CLICK, _this.toggleRenderType);
 
 
             _this.chartData.subChart_1.data = {
