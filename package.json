@@ -1,6 +1,6 @@
 {
-  "name": "expressDemo",
-  "version": "0.0.0",
+  "name": "expressdemo",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "supervisor ./bin/www"
@@ -27,5 +27,21 @@
     "morgan": "~1.6.1",
     "mysql": "^2.9.0",
     "serve-favicon": "~2.3.0"
-  }
+  },
+  "description": "express Demo",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IChocolateKapa/expressDemo.git"
+  },
+  "keywords": [
+    "express",
+    "echarts"
+  ],
+  "author": "Echo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IChocolateKapa/expressDemo/issues"
+  },
+  "homepage": "https://github.com/IChocolateKapa/expressDemo#readme"
 }
