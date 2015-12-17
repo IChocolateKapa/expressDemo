@@ -1,0 +1,21 @@
+//
+   Created by Echo on 2015/12/17.
+
+extends ../layout
+
+block append head
+    link(rel="stylesheet", href="/lib/eModal/css/modal.css")
+    script(src="/lib/eModal/eModal.js")
+    script(src="/lib/fastclick/fastclick.js")
+    script(src="/js/page_mobile.js")
+
+block content
+    div.myList
+        ul.imgUl
+            - var imagesList =imgList
+            - each img in imagesList
+                li.imgListItem
+                    <a href=#{img.url}><img src=#{img.url} /></a>
+                    //    img(src=#{img.url}, alt=#{img.name})
+
+
